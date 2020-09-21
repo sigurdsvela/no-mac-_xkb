@@ -1,0 +1,49 @@
+partial alphanumeric_keys
+xkb_symbols "basic" {
+    include "no_mac(base_nodead)"
+    name[Group1]= "Norwegian (Macintosh Custom)";
+	
+    key <LSGT>	{ [      section,    bar,      onehalf, threequarters]	};
+    key <TLDE>	{ [       less,    greater     ]	};
+    key <BKSL> {  [        at,   astrix,     U0027,      U0027] };
+    key <AE04>	{ [         4,   dollar,       EuroSign,       dollar ]	};
+};
+
+
+// Copied from macintosh_vndr/no
+partial alphanumeric_keys
+xkb_symbols "base" {
+
+    // Describes the differences between a very simple en_US
+    // keyboard and a very simple Norwegian keyboard.
+
+    include "latin(type4)"
+    name[Group1]= "Norwegian (Macintosh)";
+
+    key <TLDE>	{ [       bar,    section     ]	};
+    key <AE03>	{ [         3, numbersign,     sterling,     sterling ]	};
+    key <AE04>	{ [         4,   currency,       dollar,       dollar ]	};
+    key <AE06>	{ [         6,  ampersand, threequarters, fiveeighths ]	};
+    key <AE07>	{ [         7,      slash,          bar,    backslash ]	};
+    key <AE08>	{ [         8,  parenleft,  bracketleft,    braceleft ]	};
+    key <AE09>	{ [         9, parenright, bracketright,   braceright ]	};
+    key <AC10>	{ [    oslash,   Ooblique,   odiaeresis,   Odiaeresis ]	};
+    key <AE11>	{ [      plus,   question     ]	};
+    key <AC11>	{ [        ae,         AE     ]	};
+    key <AD11>	{ [     aring,      Aring     ]	};
+    key <AE12>	{ [ dead_grave, dead_acute,       acute,  dead_ogonek ]	};
+    key <AD12>	{ [ diaeresis, asciicircum,  asciitilde,  dead_macron ]	};
+    key <BKSL>	{ [        at,   asterisk     ]	};
+};
+
+partial alphanumeric_keys
+xkb_symbols "base_nodead" {
+
+    // Modifies the base Norwegian layout to no dead keys
+    include "no_mac(base)"
+    name[Group1]= "Norwegian (Macintosh, no dead keys)";
+
+    key <AE12>	{ [      grave,     acute,        acute,       ogonek ]	};
+    key <AD12>	{ [  diaeresis, asciicircum, asciitilde,       macron ]	};
+};
+
