@@ -3,7 +3,7 @@ xkb_symbols "basic" {
     include "no_mac(base_nodead)"
     name[Group1]= "Norwegian (Macintosh Custom)";
 	
-    key <LSGT>	{ [      section,    bar,      onehalf, threequarters]	};
+    key <LSGT>	{ [      U0027, section,   EuroSign, EuroSign]	};
     key <TLDE>	{ [       less,    greater     ]	};
     key <BKSL> {  [        at,   astrix,     U0027,      U0027] };
     key <AE04>	{ [         4,   dollar,       EuroSign,       dollar ]	};
