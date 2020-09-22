@@ -5,7 +5,7 @@ xkb_symbols "basic" {
 	
     key <LSGT>	{ [      U0027, section,   EuroSign, EuroSign]	};
     key <TLDE>	{ [       less,    greater     ]	};
-    key <BKSL> {  [        at,   astrix,     U0027,      U0027] };
+    key <BKSL> {  [        at,   asterisk,     U0027,      U0027] };
     key <AE04>	{ [         4,   dollar,       EuroSign,       dollar ]	};
 };
 
